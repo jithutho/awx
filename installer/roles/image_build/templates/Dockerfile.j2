@@ -62,6 +62,9 @@ RUN chmod +x /tini
 RUN python3 -m ensurepip && pip3 install virtualenv
 RUN pip install supervisor
 
+## Added by Jithu for neteng environment
+RUN pip install docker
+
 ADD Makefile /tmp/Makefile
 RUN mkdir /tmp/requirements
 ADD requirements/requirements_ansible.txt \
